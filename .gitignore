@@ -1,0 +1,10 @@
+# binaries
+*.bin
+*.out
+*.raw
+
+# vim saves
+*.swp
+
+# another repos :p
+C/c-minesweeper
