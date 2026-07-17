@@ -5,6 +5,7 @@
 
 # vim saves
 *.swp
+sometmpnotes
 
 # another repos :p
 C/c-minesweeper
