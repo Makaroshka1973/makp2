@@ -1,6 +1,7 @@
 # binaries
 *.bin
 *.out
+*.o
 *.raw
 
 # vim saves
