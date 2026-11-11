@@ -63,7 +63,7 @@ Additional opcode-specific signals are generated through separate decoding logic
 
 This approach combines ROM-based control signal generation with additional opcode checks for instructions requiring special handling.
 
-[Decoder and ValGen Unit](../images/decoder_and_valgen.png)
+![Decoder and ValGen Unit](../images/decoder_and_valgen.png)
 
 
 ### ValGen Unit
@@ -87,7 +87,7 @@ The ImmSel control signal determines which immediate format is used.
 
 The resulting value is supplied to the appropriate functional units, primarily the ALU.
 
-[ImmGen Unit](../images/immgen.png)
+![ImmGen Unit](../images/immgen.png)
 
 
 ### ACU
@@ -106,7 +106,7 @@ It supports four operation categories:
 
 This organization allows the ALU to support different instruction categories while keeping operation selection separate from the main instruction decoder.
 
-[ACU](../images/acu.png)
+![ACU](../images/acu.png)
 
 
 ### ALU
@@ -117,7 +117,7 @@ It does arithmetic calculations, bitwise logical operations, shift operations, m
 
 The ALU receives its operands from the Register File, the ImmGen, or the PC, depending on the instruction being executed.
 
-[ALU](../images/alu.png)
+![ALU](../images/alu.png)
 
 
 
@@ -149,7 +149,7 @@ It provides two read ports, selected by rs1 and rs2, and one write port addresse
 
 Register writes are controlled by RegWrite control signal.
 
-[RegFile](../images/regfile.png)
+![RegFile](../images/regfile.png)
 
 
 ### PC
@@ -158,7 +158,7 @@ The Program Counter maintains the address used for instruction fetching.
 
 Its next value depends on the current instruction and system control signals. It supports sequential execution, conditional branches, jumps, and privileged control-flow operations.
 
-[PC](../images/pc.png)
+![PC](../images/pc.png)
 
 
 
@@ -179,7 +179,7 @@ Each bank stores one byte from every 32-bit word, e. g. bank 0 stores the first 
 
 The four banks operate in parallel, allowing the processor to access a complete 32-bit word through a single memory access operation.
 
-[RAM](../images/ram.png)
+![RAM](../images/ram.png)
 
 
 ### Unaligned Memory Access
@@ -205,7 +205,7 @@ The implemented devices include a terminal interface, a display, a keyboard, and
 
 These peripherals provide basic interaction between software running on the processor and its external environment.
 
-[MMIO](../images/mmio.png)
+![MMIO](../images/mmio.png)
 
 
 
@@ -233,7 +233,7 @@ The implementation includes six CSRs:
 
 The CSRFile provides the storage and access interface required by CSR instructions and the SysControl Unit.
 
-[CSRFile](../images/csrfile.png)
+![CSRFile](../images/csrfile.png)
 
 
 ### CSRLU
@@ -251,7 +251,7 @@ Its operation is controlled by the two-bit CSRWriteMode signal.
 
 The resulting value is supplied to the CSRFile for updating the corresponding register.
 
-[CSRLU](../images/csrlu.png)
+![CSRLU](../images/csrlu.png)
 
 
 ### SysControl Unit
@@ -262,7 +262,7 @@ When a system instruction is detected, the unit identifies its type and generate
 
 It handles the ECALL, EBREAK, and MRET instructions, controls CSR access, manages privilege-mode transitions, processes supported interrupts, and updates trap-related CSR values.
 
-[SysControl Unit](../images/syscontrol.png)
+![SysControl Unit](../images/syscontrol.png)
 
 
 ### Exception and Interrupt Handling
